@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Leave Status</title></head>
+<body style="font-family:Arial,sans-serif;">
+  <div style="max-width:600px;margin:20px auto;padding:24px;background:#fff;border-radius:8px">
+    <h2 th:style="${status == 'APPROVED'} ? 'color:#27ae60' : 'color:#e74c3c'">
+      Leave Application <span th:text="${status}"></span>
+    </h2>
+    <p>Your <strong th:text="${leaveType}"></strong> has been <strong th:text="${status}"></strong>.</p>
+    <p th:if="${comments}">Manager Comments: <em th:text="${comments}"></em></p>
+  </div>
+</body>
+</html>

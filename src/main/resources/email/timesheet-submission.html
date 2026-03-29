@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Timesheet Submission</title></head>
+<body style="font-family: Arial, sans-serif;">
+  <div style="max-width:600px;margin:20px auto;background:#fff;padding:24px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
+    <h2 style="color:#2980b9">📅 Timesheet Submitted</h2>
+    <p>Please find attached the timesheet for:</p>
+    <table style="width:100%;border-collapse:collapse">
+      <tr><td style="padding:8px;font-weight:bold">Employee:</td><td th:text="${employeeName}"></td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Month:</td><td th:text="${month}"></td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Year:</td><td th:text="${year}"></td></tr>
+    </table>
+    <p>Please review and approve at your earliest convenience.</p>
+  </div>
+</body>
+</html>

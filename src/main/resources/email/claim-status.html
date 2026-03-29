@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Claim Status Update</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; }
+    .container { max-width: 600px; margin: 20px auto; background: #fff; border-radius: 8px; padding: 24px; }
+    .status-approved { color: #27ae60; font-weight: bold; }
+    .status-rejected { color: #e74c3c; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Claim Status Update</h2>
+    <p>Your claim <strong th:text="${claimNumber}"></strong> has been
+      <span class="status-approved" th:if="${status == 'APPROVED'}" th:text="${status}"></span>
+      <span class="status-rejected" th:if="${status == 'REJECTED'}" th:text="${status}"></span>.
+    </p>
+    <p th:if="${comments}">Reviewer Comments: <em th:text="${comments}"></em></p>
+  </div>
+</body>
+</html>
