@@ -85,11 +85,11 @@ public class UserEntity extends BaseEntity {
       private ClientEntity client;
 //
 //    @ManyToOne(fetch = FetchType.LAZY)
-//    @JoinColumn(name = "manager_id")
-//    private User manager;
+      @JoinColumn(name = "manager_id")
+      private UserEntity manager;
 //
-//    public String getFullName() {
-//        return firstName + " " + lastName;
-//    }
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
 
 }

@@ -2,6 +2,7 @@ package com.akash.authSecurityPermission.config;
 
 import com.akash.authSecurityPermission.entity.PermissionEntity;
 import com.akash.authSecurityPermission.entity.RoleEntity;
+import com.akash.authSecurityPermission.entity.UserEntity;
 import com.akash.authSecurityPermission.enums.Feature;
 import com.akash.authSecurityPermission.enums.RoleType;
 import com.akash.authSecurityPermission.repository.PermissionRepository;
@@ -132,8 +133,8 @@ public class DataSeeder implements CommandLineRunner {
 
     private void seedSuperAdmin() {
         if (!userRepository.existsByUsername("superadmin")) {
-            Role superAdminRole = roleRepository.findByName("SUPER_ADMIN").orElseThrow();
-            User superAdmin = User.builder()
+            RoleEntity  superAdminRole = roleRepository.findByName("SUPER_ADMIN").orElseThrow();
+            UserEntity superAdmin = UserEntity.builder()
                     .username("superadmin")
                     .email("superadmin@enterprise.com")
                     .password(passwordEncoder.encode("SuperAdmin@123"))
@@ -142,7 +143,7 @@ public class DataSeeder implements CommandLineRunner {
                     .employeeId("EMP00001")
                     .department("IT")
                     .designation("System Administrator")
-                    .roles(Set.of(superAdminRole))
+                    .roleEntities(Set.of(superAdminRole))
                     .build();
             userRepository.save(superAdmin);
             log.info("Super admin user created: superadmin / SuperAdmin@123");
