@@ -1,6 +1,5 @@
 package com.akash.authSecurityPermission.repository;
 
-import com.akash.authSecurityPermission.entity.RefreshToken;
 import com.akash.authSecurityPermission.entity.RefreshTokenEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -12,10 +11,10 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface RefreshTokenRepository extends JpaRepository<RefreshTokenEntity, UUID> {
+public interface RefreshTokenRepository extends JpaRepository<RefreshTokenEntity, Long> {
 
-    Optional<RefreshToken> findByToken(String token);
-    Optional<RefreshToken> findByUserId(Long userId);
+    Optional<RefreshTokenEntity> findByToken(String token);
+    Optional<RefreshTokenEntity> findByUserId(Long userId);
 
     @Modifying
     @Query("DELETE FROM RefreshToken r WHERE r.user.id = :userId")

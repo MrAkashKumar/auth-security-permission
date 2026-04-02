@@ -1,9 +1,10 @@
 package com.akash.authSecurityPermission.entity;
 
-import com.enterprise.app.enums.RoleType;
+import com.akash.authSecurityPermission.enums.RoleType;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.security.Permission;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,7 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Role extends BaseEntity {
+public class RoleEntity extends BaseEntity {
 
     @Column(nullable = false, unique = true)
     private String name;
@@ -34,5 +35,5 @@ public class Role extends BaseEntity {
         joinColumns = @JoinColumn(name = "role_id"),
         inverseJoinColumns = @JoinColumn(name = "permission_id"))
     @Builder.Default
-    private Set<Permission> permissions = new HashSet<>();
+    private Set<PermissionEntity> permissions = new HashSet<>();
 }
