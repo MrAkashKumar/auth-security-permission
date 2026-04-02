@@ -5,6 +5,9 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
+/**
+ * @author Akash Kumar
+ */
 @Entity
 @Table(name = "audit_logs")
 @Getter

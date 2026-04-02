@@ -1,5 +1,9 @@
 package com.akash.authSecurityPermission.enums;
 
+/**
+ * @author Akash Kumar
+ */
+
 public enum LeaveType {
     ANNUAL_LEAVE("Annual Leave"),
     MEDICAL_LEAVE("Medical Leave"),

@@ -4,6 +4,9 @@ import com.akash.authSecurityPermission.enums.Feature;
 import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * @author Akash Kumar
+ */
 @Entity
 @Table(name = "permissions", uniqueConstraints = {
     @UniqueConstraint(columnNames = {"feature", "action"})

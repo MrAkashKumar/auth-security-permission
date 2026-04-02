@@ -1,5 +1,8 @@
 package com.akash.authSecurityPermission.enums;
 
+/**
+ * @author Akash Kumar
+ */
 public enum Feature {
     // User Management
     USER_CREATE, USER_READ, USER_UPDATE, USER_DELETE,

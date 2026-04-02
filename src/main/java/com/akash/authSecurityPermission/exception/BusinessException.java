@@ -3,6 +3,9 @@ package com.akash.authSecurityPermission.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/**
+ * @author Akash Kumar
+ */
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class BusinessException extends RuntimeException {
     private final int statusCode;

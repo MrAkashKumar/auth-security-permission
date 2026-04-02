@@ -1,7 +1,7 @@
 package com.akash.authSecurityPermission.security.interceptor;
 
-import com.enterprise.app.exception.AccessDeniedException;
-import com.enterprise.app.security.UserPrincipal;
+import com.akash.authSecurityPermission.exception.AccessDeniedException;
+import com.akash.authSecurityPermission.security.UserPrincipal;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -13,6 +13,9 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
+/**
+ * @author Akash Kumar
+ */
 @Slf4j
 @Aspect
 @Component

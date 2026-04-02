@@ -5,6 +5,10 @@ import lombok.*;
 
 import java.time.Instant;
 
+/**
+ * @author Akash Kumar
+ */
+
 @Entity
 @Table(name = "refresh_tokens")
 @Getter

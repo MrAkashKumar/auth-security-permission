@@ -9,6 +9,9 @@ import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
+/**
+ * @author Akash Kumar
+ */
 @Data
 @Component
 @ConfigurationProperties(prefix = "app")

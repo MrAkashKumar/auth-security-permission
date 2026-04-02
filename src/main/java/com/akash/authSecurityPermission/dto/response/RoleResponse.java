@@ -9,7 +9,13 @@ import lombok.NoArgsConstructor;
 import java.util.Set;
 import java.util.UUID;
 
-@Data @Builder @NoArgsConstructor @AllArgsConstructor
+/**
+ * @author Akash Kumar
+ */
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RoleResponse {
     private UUID id;
     private String name;

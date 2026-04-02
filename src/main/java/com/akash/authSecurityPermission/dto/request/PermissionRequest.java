@@ -4,7 +4,9 @@ import com.akash.authSecurityPermission.enums.Feature;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-
+/**
+ * @author Akash Kumar
+ */
 @Data
 public class PermissionRequest {
     @NotNull(message = "Feature is required")

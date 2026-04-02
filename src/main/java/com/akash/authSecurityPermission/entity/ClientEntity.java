@@ -5,6 +5,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.*;
 
+/**
+ * @author Akash Kumar
+ */
 @Entity
 @Table(name = "clients")
 @Getter

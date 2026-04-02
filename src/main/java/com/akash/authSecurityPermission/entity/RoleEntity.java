@@ -3,11 +3,12 @@ package com.akash.authSecurityPermission.entity;
 import com.akash.authSecurityPermission.enums.RoleType;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.security.Permission;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @author Akash Kumar
+ */
 @Entity
 @Table(name = "roles")
 @Getter

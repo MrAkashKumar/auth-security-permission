@@ -1,6 +1,6 @@
 package com.akash.authSecurityPermission.security.interceptor;
 
-import com.enterprise.app.enums.Feature;
+import com.akash.authSecurityPermission.enums.Feature;
 
 import java.lang.annotation.*;
 

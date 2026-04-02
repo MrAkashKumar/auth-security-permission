@@ -2,6 +2,9 @@ package com.akash.authSecurityPermission.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
+/**
+ * @author Akash Kumar
+ */
 
 @ResponseStatus(HttpStatus.FORBIDDEN)
 public class AccessDeniedException extends RuntimeException {

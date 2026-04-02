@@ -10,6 +10,9 @@ import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.UUID;
 
+/**
+ * @author Akash Kumar
+ */
 @Data @Builder @NoArgsConstructor @AllArgsConstructor
 public class UserResponse {
     private UUID id;

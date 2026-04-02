@@ -5,13 +5,15 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 import java.util.Set;
-import java.util.UUID;
 
+/**
+ * @author Akash Kumar
+ */
 @Data
 public class RoleRequest {
     @NotBlank(message = "Role name is required")
     private String name;
     private RoleType roleType;
     private String description;
-    private Set<UUID> permissionIds;
+    private Set<Long> permissionIds;
 }
